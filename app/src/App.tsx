@@ -36,7 +36,7 @@ function App() {
               { to: '/events', label: 'Events' },
               { to: '/colleges', label: 'Colleges' },
               { to: '/dashboard', label: 'Dashboard', className: 'bg-primary text-primary-foreground hover:brightness-110 ml-1' },
-            ].map((item, idx) => (
+            ].map((item) => (
               <Link
                 key={item.to}
                 to={item.to}

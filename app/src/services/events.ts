@@ -1,4 +1,4 @@
-import { addDoc, collection, doc, getDocs, onSnapshot, orderBy, query, serverTimestamp, setDoc } from 'firebase/firestore'
+import { addDoc, collection, getDocs, onSnapshot, orderBy, query, serverTimestamp, setDoc } from 'firebase/firestore'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import { db, storage, isFirebaseEnabled } from '../lib/firebase'
 import { supabase, isSupabaseEnabled } from '../lib/supabase'

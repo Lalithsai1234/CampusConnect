@@ -12,7 +12,7 @@ type Props = {
 }
 
 export default function CollegeCard({ college }: Props) {
-  const { user, getFollowedColleges, toggleFollowCollege, followVersion } = useAuth()
+  const { user, getFollowedColleges, toggleFollowCollege } = useAuth()
   const isStudent = user?.role === 'student'
   const isFollowing = isStudent && getFollowedColleges().includes(college.id)
   const fallback = `https://picsum.photos/seed/${encodeURIComponent(college.id)}/600/400`

@@ -14,8 +14,9 @@ export type Event = {
   registrationDetails?: string
 }
 
-const now = new Date()
-const addDays = (n: number) => new Date(now.getTime() + n * 24 * 60 * 60 * 1000)
+// const now = new Date()
+// Helper for generating demo dates (currently unused)
+// const addDays = (n: number) => new Date(now.getTime() + n * 24 * 60 * 60 * 1000)
 
 export const events: Event[] = [
   {

@@ -36,7 +36,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(user))
   }, [user])
 
-  async function loginStudent({ email, name }: { email: string; name?: string }) {
+  async function loginStudent({ email }: { email: string }) {
     const existing = JSON.parse(localStorage.getItem('campusconnect_students') || '{}') as Record<string, Student>
     const student = existing[email]
     if (!student) throw new Error('Account not found. Please sign up.')

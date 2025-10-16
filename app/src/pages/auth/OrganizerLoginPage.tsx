@@ -1,4 +1,5 @@
-import { FormEvent, useMemo, useState } from 'react'
+import type { FormEvent } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 import { colleges } from '../../data/colleges'
@@ -10,9 +11,7 @@ export default function OrganizerLoginPage() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
 
-  const help = useMemo(() => {
-    return ''
-  }, [])
+  // Help text removed (unused)
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault()
