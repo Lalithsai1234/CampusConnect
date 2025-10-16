@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 11 15 25; /* #0b0f19 */
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-[rgb(var(--bg))] text-white antialiased;
+}
+
+.container-responsive {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.bg-grid {
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px;
+  background-position: -1px -1px, -1px -1px;
+}
+
+.gradient-spotlight {
+  position: fixed;
+  inset: -200px;
+  z-index: -1;
+  pointer-events: none;
+}
